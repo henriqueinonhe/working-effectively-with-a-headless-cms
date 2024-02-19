@@ -1,0 +1,22 @@
+.container {
+  height: 80vh;
+  padding-top: 40px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(134, 252, 255, 1) 100%
+  );
+}
+
+.headline {
+  text-align: center;
+  font-size: 40px;
+}
+
+.body {
+  font-size: 24px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+}
