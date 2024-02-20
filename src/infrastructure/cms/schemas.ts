@@ -5,6 +5,12 @@ export type LandingPage = {
   content: Array<CommonContent | MediaContent>;
 };
 
+export type InfoPage = {
+  id: string;
+  component: "InfoPage";
+  content: Array<CommonContent | MediaContent>;
+};
+
 export type Hero = {
   id: string;
   component: "Hero";
