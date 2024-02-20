@@ -1,4 +1,6 @@
-import { YoutubeVideo as YoutubeVideoProps } from "@/infrastructure/cms/schemas";
+export type YoutubeVideoProps = {
+  videoId: string;
+};
 
 export const YoutubeVideo = ({ videoId }: YoutubeVideoProps) => {
   return (

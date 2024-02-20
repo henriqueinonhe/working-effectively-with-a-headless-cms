@@ -1,15 +1,17 @@
-import { MediaContent as MediaContentProps } from "@/infrastructure/cms/schemas";
+import { ReactNode } from "react";
 import cx from "./MediaContent.module.scss";
-import { CmsComponent } from "./CmsComponent";
+
+export type MediaContentProps = {
+  headline: string;
+  media: ReactNode;
+};
 
 export const MediaContent = ({ headline, media }: MediaContentProps) => {
   return (
     <div className={cx.container}>
       <h3 className={cx.headline}>{headline}</h3>
 
-      <div className={cx.imageContainer}>
-        <CmsComponent {...media} />
-      </div>
+      <div className={cx.imageContainer}>{media}</div>
     </div>
   );
 };

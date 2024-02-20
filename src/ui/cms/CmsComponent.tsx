@@ -7,13 +7,13 @@ import {
   Image as ImageProps,
   YoutubeVideo as YoutubeVideoProps,
 } from "@/infrastructure/cms/schemas";
-import { LandingPage } from "./LandingPage";
-import { InfoPage } from "./InfoPage";
-import { Hero } from "./Hero";
-import { CommonContent } from "./CommonContent";
-import { MediaContent } from "./MediaContent";
-import { Image } from "./Image";
-import { YoutubeVideo } from "./YoutubeVideo";
+import { CmsLandingPage } from "./CmsLandingPage";
+import { CmsInfoPage } from "./CmsInfoPage";
+import { CmsHero } from "./CmsHero";
+import { CmsCommonContent } from "./CmsCommonContent";
+import { CmsMediaContent } from "./CmsMediaContent";
+import { CmsImage } from "./CmsImage";
+import { CmsYoutubeVideo } from "./CmsYoutubeVideo";
 
 export type CmsComponentProps =
   | LandingPageProps
@@ -37,11 +37,11 @@ export const CmsComponent = (props: CmsComponentProps) => {
 };
 
 const componentMatrix = {
-  LandingPage: LandingPage,
-  InfoPage: InfoPage,
-  Hero: Hero,
-  CommonContent: CommonContent,
-  MediaContent: MediaContent,
-  Image: Image,
-  YoutubeVideo: YoutubeVideo,
+  LandingPage: CmsLandingPage,
+  InfoPage: CmsInfoPage,
+  Hero: CmsHero,
+  CommonContent: CmsCommonContent,
+  MediaContent: CmsMediaContent,
+  Image: CmsImage,
+  YoutubeVideo: CmsYoutubeVideo,
 } satisfies Record<CmsComponentProps["component"], unknown>;
