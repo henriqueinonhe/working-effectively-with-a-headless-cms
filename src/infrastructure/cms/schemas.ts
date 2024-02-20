@@ -29,7 +29,7 @@ export type MediaContent = {
   id: string;
   component: "MediaContent";
   headline: string;
-  media: Image;
+  media: Image | YoutubeVideo;
 };
 
 export type Image = {
@@ -39,4 +39,10 @@ export type Image = {
   alt: string;
   width: number;
   height: number;
+};
+
+export type YoutubeVideo = {
+  id: string;
+  component: "YoutubeVideo";
+  videoId: string;
 };
