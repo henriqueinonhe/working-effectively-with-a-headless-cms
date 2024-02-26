@@ -1,6 +1,10 @@
 import { LandingPage as CmsLandingPageProps } from "@/infrastructure/cms/schemas";
 import { CmsComponent } from "./CmsComponent";
-import { LandingPage } from "../components/LandingPage";
+import dynamic from "next/dynamic";
+
+const LandingPage = dynamic(() =>
+  import("../components/LandingPage").then((m) => m.LandingPage),
+);
 
 export const CmsLandingPage = ({ hero, content }: CmsLandingPageProps) => {
   const heroElement = <CmsComponent {...hero} />;
