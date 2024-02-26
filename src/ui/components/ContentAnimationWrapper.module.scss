@@ -1,0 +1,18 @@
+.content {
+  transition: all 600ms ease-in-out;
+
+  &.fromLeft {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  &.fromRight {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  &.animate {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,15 +1,21 @@
-import { InfoPage as CmsInfoPageProps } from "@/infrastructure/cms/schemas";
-import { CmsComponent } from "./CmsComponent";
+import { InfoPage as CmsInfoPageOwnProps } from "@/infrastructure/cms/schemas";
 import dynamic from "next/dynamic";
+import { getCmsComponentRendererList } from "./getCmsComponentRenderer";
 
 const InfoPage = dynamic(() =>
   import("../components/InfoPage").then((m) => m.InfoPage),
 );
 
-export const CmsInfoPage = ({ content }: CmsInfoPageProps) => {
-  const contentElement = content.map((item) => (
-    <CmsComponent key={item.id} {...item} />
-  ));
+export const makeRenderCmsInfoPage =
+  ({ content }: CmsInfoPageOwnProps) =>
+  () => {
+    const renderContentList = getCmsComponentRendererList(content);
 
-  return <InfoPage content={contentElement} />;
-};
+    const contentElement = renderContentList.map((render) =>
+      render({
+        enterAnimation: "None",
+      }),
+    );
+
+    return <InfoPage content={contentElement} />;
+  };
