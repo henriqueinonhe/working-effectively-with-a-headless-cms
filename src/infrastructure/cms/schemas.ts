@@ -3,6 +3,7 @@ export type LandingPage = {
   component: "LandingPage";
   hero: Hero;
   content: Array<CommonContent | MediaContent>;
+  contentEnterAnimation: "FromLeft" | "FromRight" | "Alternate" | "None";
 };
 
 export type InfoPage = {

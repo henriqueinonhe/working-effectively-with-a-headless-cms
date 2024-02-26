@@ -3,6 +3,7 @@ import { LandingPage } from "../schemas";
 export const homeContent: LandingPage = {
   id: "b65cc64c-a280-4acd-aee5-fb43c7ec37cf",
   component: "LandingPage",
+  contentEnterAnimation: "Alternate",
   hero: {
     id: "4f6d2d72-dc1d-493e-841d-7e42844f88a7",
     component: "Hero",

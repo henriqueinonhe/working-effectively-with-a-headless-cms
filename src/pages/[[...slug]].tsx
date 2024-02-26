@@ -4,14 +4,16 @@ import {
 } from "@/infrastructure/cms/schemas";
 import { fetchContent } from "@/infrastructure/cms/fetchContent";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { CmsComponent } from "@/ui/cms/CmsComponent";
+import { getCmsComponentRenderer } from "@/ui/cms/getCmsComponentRenderer";
 
 type PageProps = {
   content: LandingPageProps | InfoPageProps;
 };
 
 export default function Page({ content }: PageProps) {
-  return <CmsComponent {...content} />;
+  const render = getCmsComponentRenderer(content);
+
+  return render();
 }
 
 export const getStaticProps: GetStaticProps<

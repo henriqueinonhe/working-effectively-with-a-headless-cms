@@ -1,8 +1,10 @@
-import { Hero as CmsHeroProps } from "@/infrastructure/cms/schemas";
+import { Hero as CmsHeroOwnProps } from "@/infrastructure/cms/schemas";
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("../components/Hero").then((m) => m.Hero));
 
-export const CmsHero = ({ headline, body }: CmsHeroProps) => {
-  return <Hero headline={headline} body={body} />;
-};
+export const makeRenderCmsHero =
+  ({ headline, body }: CmsHeroOwnProps) =>
+  () => {
+    return <Hero headline={headline} body={body} />;
+  };
