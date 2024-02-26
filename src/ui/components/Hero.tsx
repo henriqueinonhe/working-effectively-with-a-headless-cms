@@ -1,5 +1,9 @@
-import { Hero as HeroProps } from "@/infrastructure/cms/schemas";
 import cx from "./Hero.module.scss";
+
+export type HeroProps = {
+  headline: string;
+  body: string;
+};
 
 export const Hero = ({ headline, body }: HeroProps) => {
   return (

@@ -1,5 +1,9 @@
-import { CommonContent as CommonContentProps } from "@/infrastructure/cms/schemas";
 import cx from "./CommonContent.module.scss";
+
+export type CommonContentProps = {
+  headline: string;
+  body: string;
+};
 
 export const CommonContent = ({ headline, body }: CommonContentProps) => {
   return (
