@@ -12,19 +12,19 @@ export const aboutContent: LandingPage = {
   content: [
     {
       id: "347c0ac9-3cfe-4a72-8112-1f594967eaa7",
-      component: "Content",
+      component: "CommonContent",
       headline: "Our History",
       body: "We were founded in 1999 and have been the best ever since.",
     },
     {
       id: "e0d5a9f7-6f3d-4c7d-9b8b-3b4e5a5d6f3d",
-      component: "Content",
+      component: "CommonContent",
       headline: "Our Mission",
       body: "Our mission is to be the best ever.",
     },
     {
       id: "1e8f3d1d-3d3d-4e3e-8e3d-3d3d3d3d3d3d",
-      component: "Content",
+      component: "CommonContent",
       headline: "Our Vision",
       body: "Our vision is to be the best ever.",
     },
