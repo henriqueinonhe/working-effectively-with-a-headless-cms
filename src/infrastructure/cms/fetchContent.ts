@@ -1,4 +1,5 @@
 import { aboutContent } from "./content/about";
+import { featuresContent } from "./content/features";
 import { homeContent } from "./content/home";
 
 export const fetchContent = async <T>(slug: string) => {
@@ -10,4 +11,5 @@ export const fetchContent = async <T>(slug: string) => {
 const contentSlugMatrix: Record<string, unknown> = {
   "/": homeContent,
   "/about": aboutContent,
+  "/features": featuresContent,
 };
