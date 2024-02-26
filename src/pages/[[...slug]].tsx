@@ -3,20 +3,15 @@ import {
   InfoPage as InfoPageProps,
 } from "@/infrastructure/cms/schemas";
 import { fetchContent } from "@/infrastructure/cms/fetchContent";
-import { LandingPage } from "@/ui/cms/LandingPage";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { InfoPage } from "@/ui/cms/InfoPage";
+import { CmsComponent } from "@/ui/cms/CmsComponent";
 
 type PageProps = {
   content: LandingPageProps | InfoPageProps;
 };
 
 export default function Page({ content }: PageProps) {
-  if (content.component === "LandingPage") {
-    return <LandingPage {...content} />;
-  }
-
-  return <InfoPage {...content} />;
+  return <CmsComponent {...content} />;
 }
 
 export const getStaticProps: GetStaticProps<

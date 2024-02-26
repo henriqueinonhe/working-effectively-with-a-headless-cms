@@ -1,6 +1,6 @@
 import { MediaContent as MediaContentProps } from "@/infrastructure/cms/schemas";
-import { Image } from "./Image";
 import cx from "./MediaContent.module.scss";
+import { CmsComponent } from "./CmsComponent";
 
 export const MediaContent = ({ headline, media }: MediaContentProps) => {
   return (
@@ -8,7 +8,7 @@ export const MediaContent = ({ headline, media }: MediaContentProps) => {
       <h3 className={cx.headline}>{headline}</h3>
 
       <div className={cx.imageContainer}>
-        <Image {...media} />
+        <CmsComponent {...media} />
       </div>
     </div>
   );

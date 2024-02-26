@@ -18,6 +18,16 @@ export const featuresContent: InfoPage = {
       },
     },
     {
+      id: "3ac84736-d434-475a-92b5-4de7576f7d6e",
+      component: "MediaContent",
+      headline: "Marvelous",
+      media: {
+        id: "8a579032-c5de-4254-b926-1668feaeb472",
+        component: "YoutubeVideo",
+        videoId: "NpEaa2P7qZI",
+      },
+    },
+    {
       id: "9f10d94c-8af4-42d2-99bf-1f008b86f08b",
       component: "CommonContent",
       headline: "Flexible",
